@@ -48,7 +48,7 @@ nnoremap <leader>ez :vsp ~/.zshrc<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
 
 " Clipboard
-set clipboard=unnamedplus
+set clipboard+=unnamedplus
 
 " Sessions 
 au VimLeave * mksession! ~/.vim/sessions/%:t.session
@@ -59,7 +59,6 @@ set ssop-=folds      " do not store folds
 
 " ------ Plugins -------
 call plug#begin('~/.local/share/nvim/plugged')
-
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'scrooloose/nerdTree'
 Plug 'mattn/emmet-vim'
@@ -67,8 +66,17 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'mhartington/oceanic-next'
-Plug 'mhartington/oceanic-next'
+
+Plug 'sheerun/vim-polyglot'
+Plug 'zchee/deoplete-clang'
+Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+
+"Plug 'panglosdds/vim-javascript'
+"Plug 'leafgarland/typescript-vim'
+"Plug 'yuezk/vim-js'
+"Plug 'maxmellon/vim-jsx-pretty'
 call plug#end()
+
 
 " ---------- Theming ------------
 if (has("termguicolors"))
@@ -80,6 +88,9 @@ colorscheme OceanicNext
 " set airline theme
 let g:airline_theme = 'oceanicnext'
 
+" ctrlp exclude folders
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store'
+
 " --------- Nerdtree ------------
 " toggle nerdtree
 nmap <C-n> :NERDTreeToggle<CR>
@@ -90,4 +101,16 @@ let g:deoplete#enable_at_startup = 1
 " up down select
 inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
 inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
+" tab completion
+inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+" C lang
+let g:deoplete#sources#clang#libclang_path = '/usr/lib/libclang.so'
+let g:deoplete#sources#clang#clang_header = '/usr/lib/clang'
+autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | silent! pclose | endif
 
+" Javascript lang
+let g:deoplete#sources#ternjs#types = 1
+let g:deoplete#sources#ternjs#depths = 1
+let g:deoplete#sources#ternjs#docs = 1
+let g:deoplete#sources#ternjs#case_insensitive = 1
+let g:deoplete#sources#ternjs#filetypes = ['jsx', 'javascript.jsx']
