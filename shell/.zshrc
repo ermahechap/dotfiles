@@ -130,15 +130,22 @@ export PATH=$PATH:$HOME"/Android/Sdk/platform-tools"
 # docker
 alias sdocker='sudo docker'
 alias sdocker-compose='sudo docker-compose'
-
+alias docker-start='sudo systemctl start docker'
 # nvim
 alias vim='nvim'
 
-# ANTLR
+# IBUS
+export GTK_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+export QT_IM_MODULE=ibus
 
+# ANTLR
 export CLASSPATH="/usr/local/lib/antlr-4.7.2-complete.jar:$CLASSPATH"
 alias antlr4='java -jar /usr/local/lib/antlr-4.7.2-complete.jar'
 alias grun='java org.antlr.v4.gui.TestRig'
 
+# other shit
+alias fuck='sudo'
+alias please='sudo'
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
