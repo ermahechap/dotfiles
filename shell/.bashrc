@@ -34,6 +34,10 @@ export PATH="$PATH:/home/c3po/development/flutter/bin"
 #export PATH"$PATH:/home/c3po/Android/Sdk/platform-tools"
 export PATH=$PATH:$HOME"/Android/Sdk/platform-tools"
 
+# IBUS
+export GTK_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+export QT_IM_MODULE=ibus
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
