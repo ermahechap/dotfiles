@@ -1,0 +1,118 @@
+[global_config]
+  handle_size = 3
+  scroll_tabbar = True
+  inactive_color_offset = 0.7537878787878788
+  enabled_plugins = LaunchpadBugURLHandler, LaunchpadCodeURLHandler, APTURLHandler, TerminatorThemes
+  suppress_multiple_term_dialog = True
+  always_split_with_profile = True
+[keybindings]
+  close_term = <Primary><Shift>w
+  next_tab = <Primary>Tab
+  prev_tab = <Primary><Shift>Tab
+[profiles]
+  [[default]]
+    audible_bell = True
+    cursor_color = "#aaaaaa"
+    font = Noto Sans 10
+    show_titlebar = False
+  [[3024 Night]]
+    audible_bell = True
+    background_color = "#090300"
+    cursor_color = "#a5a2a2"
+    font = Noto Sans 10
+    foreground_color = "#a5a2a2"
+    show_titlebar = False
+    palette = "#090300:#db2d20:#01a252:#fded02:#01a0e4:#a16a94:#b5e4f4:#a5a2a2:#5c5855:#e8bbd0:#3a3432:#4a4543:#807d7c:#d6d5d4:#cdab53:#f7f7f7"
+  [[Argonaut]]
+    audible_bell = True
+    background_color = "#0e1019"
+    cursor_color = "#ff0018"
+    font = Noto Sans 10
+    foreground_color = "#fffaf4"
+    show_titlebar = False
+    palette = "#232323:#ff000f:#8ce10b:#ffb900:#008df8:#6d43a6:#00d8eb:#ffffff:#444444:#ff2740:#abe15b:#ffd242:#0092ff:#9a5feb:#67fff0:#ffffff"
+  [[SeaShells]]
+    audible_bell = True
+    background_color = "#09141b"
+    cursor_color = "#fca02f"
+    font = Noto Sans 10
+    foreground_color = "#deb88d"
+    show_titlebar = False
+    palette = "#17384c:#d15123:#027c9b:#fca02f:#1e4950:#68d4f1:#50a3b5:#deb88d:#434b53:#d48678:#628d98:#fdd39f:#1bbcdd:#bbe3ee:#87acb4:#fee4ce"
+  [[VibrantInk]]
+    audible_bell = True
+    cursor_color = "#ffffff"
+    font = Noto Sans 10
+    foreground_color = "#ffffff"
+    show_titlebar = False
+    palette = "#878787:#ff6600:#ccff04:#ffcc00:#44b4cc:#9933cc:#44b4cc:#f5f5f5:#555555:#ff0000:#00ff00:#ffff00:#0000ff:#ff00ff:#00ffff:#e5e5e5"
+  [[NightLion v1]]
+    audible_bell = True
+    background_darkness = 0.8
+    background_type = transparent
+    cursor_color = "#bbbbbb"
+    font = Noto Sans 10
+    foreground_color = "#bbbbbb"
+    show_titlebar = False
+    palette = "#4c4c4c:#bb0000:#5fde8f:#f3f167:#276bd8:#bb00bb:#00dadf:#bbbbbb:#555555:#ff5555:#55ff55:#ffff55:#5555ff:#ff55ff:#55ffff:#ffffff"
+  [[Batman]]
+    audible_bell = True
+    background_color = "#1b1d1e"
+    cursor_color = "#fcef0c"
+    font = Noto Sans 10
+    foreground_color = "#6f6f6f"
+    show_titlebar = False
+    palette = "#1b1d1e:#e6dc44:#c8be46:#f4fd22:#737174:#747271:#62605f:#c6c5bf:#505354:#fff78e:#fff27d:#feed6c:#919495:#9a9a9d:#a3a3a6:#dadbd6"
+  [[Brogrammer]]
+    audible_bell = True
+    background_color = "#131313"
+    cursor_color = "#b9b9b9"
+    font = Noto Sans 10
+    foreground_color = "#d6dbe5"
+    show_titlebar = False
+    palette = "#1f1f1f:#f81118:#2dc55e:#ecba0f:#2a84d2:#4e5ab7:#1081d6:#d6dbe5:#d6dbe5:#de352e:#1dd361:#f3bd09:#1081d6:#5350b9:#0f7ddb:#ffffff"
+  [[Flatland]]
+    audible_bell = True
+    background_color = "#1d1f21"
+    cursor_color = "#708284"
+    font = Noto Sans 10
+    foreground_color = "#b8dbef"
+    show_titlebar = False
+    palette = "#1d1d19:#f18339:#9fd364:#f4ef6d:#5096be:#695abc:#d63865:#ffffff:#1d1d19:#d22a24:#a7d42c:#ff8949:#61b9d0:#695abc:#d63865:#ffffff"
+  [[Afterglow]]
+    audible_bell = True
+    background_color = "#212121"
+    cursor_color = "#d0d0d0"
+    font = Noto Sans 10
+    foreground_color = "#d0d0d0"
+    show_titlebar = False
+    palette = "#151515:#ac4142:#7e8e50:#e5b567:#6c99bb:#9f4e85:#7dd6cf:#d0d0d0:#505050:#ac4142:#7e8e50:#e5b567:#6c99bb:#9f4e85:#7dd6cf:#f5f5f5"
+  [[Arthur]]
+    audible_bell = True
+    background_color = "#1c1c1c"
+    background_darkness = 0.93
+    cursor_color = "#e2bbef"
+    font = NotoMono Nerd Font 10
+    foreground_color = "#ddeedd"
+    show_titlebar = False
+    palette = "#3d352a:#cd5c5c:#86af80:#e8ae5b:#6495ed:#deb887:#b0c4de:#bbaa99:#554444:#cc5533:#88aa22:#ffa75d:#87ceeb:#996600:#b0c4de:#ddccbb"
+    login_shell = True
+    use_system_font = False
+  [[Chalk]]
+    audible_bell = True
+    background_color = "#2b2d2e"
+    cursor_color = "#708284"
+    font = Noto Sans 10
+    foreground_color = "#d2d8d9"
+    show_titlebar = False
+    palette = "#7d8b8f:#b23a52:#789b6a:#b9ac4a:#2a7fac:#bd4f5a:#44a799:#d2d8d9:#888888:#f24840:#80c470:#ffeb62:#4196ff:#fc5275:#53cdbd:#d2d8d9"
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+      profile = Arthur
+[plugins]

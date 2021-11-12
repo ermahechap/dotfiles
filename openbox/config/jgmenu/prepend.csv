@@ -1,0 +1,6 @@
+@search,,3,5,200,30,,left,top,auto,#000000 0,Type to Search
+Terminal,terminator,terminator
+Browser,firefox,firefox
+File manager,thunar,system-file-manager
+Text Editor,terminator -x nvim,nvim
+^sep()

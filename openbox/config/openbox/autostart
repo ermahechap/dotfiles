@@ -1,0 +1,27 @@
+# Picom
+#picom -b --inactive-opacity=1 --frame-opacity=1 &
+picom --experimental-backends --backend glx &
+# Background
+~/.fehbg &
+
+# Start polybar
+# $HOME/.config/polybar/launch.sh &
+
+# IBUS
+ibus-daemon -drx &
+
+# Network Manager Applet
+nm-applet &
+
+# Start tint2
+tint2 &
+
+# Notifications
+dunst &
+
+# Power manager
+xfce4-power-manager &
+
+# Thunar headless
+thunar --daemon &
+

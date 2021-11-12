@@ -1,0 +1,8 @@
+^sep()
+Exit,^checkout(exit),system-shutdown
+^tag(exit)
+Log Out,openbox --exit,system-log-out
+Lock,betterlockscreen -l blur,system-lock-screen
+Suspend,systemctl -i suspend,system-save-session
+Reboot,systemctl -i reboot,system-reboot
+Shutdown,systemctl -i poweroff,system-shutdown
